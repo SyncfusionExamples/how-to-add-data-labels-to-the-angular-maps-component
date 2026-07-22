@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import * as worldMapData from './worldMap.json';
 import { Maps, DataLabel} from '@syncfusion/ej2-angular-maps';
+import { MapsModule, MapsTooltipService } from '@syncfusion/ej2-angular-maps';
+
 Maps.Inject(DataLabel);
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [MapsModule],
+  providers: [MapsTooltipService],
 })
 export class AppComponent {
   title = 'myangularproject';
